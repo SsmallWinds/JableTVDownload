@@ -12,8 +12,7 @@
 安裝 [FFmpeg] (未安裝也能下載 但影片拖拉時間軸會有卡幀情況發生)
 `apt install ffmpeg`
 
-### requirements
-获取m3u8地址
+### 获取m3u8地址
 在视频页面右键查看网页源代码，ctrl+f 搜索 m3u8地址
 
 ### 執行程式(Execute)
