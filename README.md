@@ -17,8 +17,9 @@
 在视频页面右键查看网页源代码，ctrl+f 搜索 m3u8地址
 
 ### 執行程式(Execute)
-`python main.py path url`
-例如`python main.py 123 https://qoei-ldmm.mushroomtrack.com/hls/6PhC08KM4mgv3B62I9noag/1631291872/0/533/533.m3u8`
+`python main.py path url`  
+例如:  
+`python main.py 123 https://qoei-ldmm.mushroomtrack.com/hls/6PhC08KM4mgv3B62I9noag/1631291872/0/533/533.m3u8`
 
 ### 等待下載(Wait download)  
 ![image](https://github.com/hcjohn463/JableDownload/blob/main/img/download.PNG)
