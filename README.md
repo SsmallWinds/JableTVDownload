@@ -6,23 +6,19 @@
 
 直接下載到電腦看沒煩惱
 
-### vitual env
-```
-python3 -m venv jable
-source jable/bin/activate. # MacOS
-```
-
 ### requirements
 `pip install -r requirements.txt`
 
 安裝 [FFmpeg] (未安裝也能下載 但影片拖拉時間軸會有卡幀情況發生)
+`apt install ffmpeg`
+
+### requirements
+获取m3u8地址
+在视频页面右键查看网页源代码，ctrl+f 搜索 m3u8地址
 
 ### 執行程式(Execute)
-`python main.py`
-
-### 輸入影片網址(Input video url)
-`https://jable.tv/videos/ipx-486/`    
-![image](https://github.com/hcjohn463/JableDownload/blob/main/img/input.PNG)  
+`python main.py path url`
+例如`python main.py 123 https://qoei-ldmm.mushroomtrack.com/hls/6PhC08KM4mgv3B62I9noag/1631291872/0/533/533.m3u8`
 
 ### 等待下載(Wait download)  
 ![image](https://github.com/hcjohn463/JableDownload/blob/main/img/download.PNG)
