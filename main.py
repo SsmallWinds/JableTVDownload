@@ -18,36 +18,44 @@ from delete import deleteM3u8, deleteMp4
 import time
 import cloudscraper
 from args import *
+import sys
 # In[2]:
 
-parser = get_parser()
-args = parser.parse_args()
+# parser = get_parser()
+# args = parser.parse_args()
 
-if(len(args.url) != 0):
-    url = args.url
-elif(args.random == True):
-    url = av_recommand()
-else:
-    # 使用者輸入Jable網址
-    url = input('輸入jable網址:')
+# if(len(args.url) != 0):
+#     url = args.url
+# elif(args.random == True):
+#     url = av_recommand()
+# else:
+#     # 使用者輸入Jable網址
+#     url = input('輸入jable網址:')
 
-# In[3]:
+# # In[3]:
 
 
-# 建立番號資料夾
-urlSplit = url.split('/')
-dirName = urlSplit[-2]
+# # 建立番號資料夾
+# urlSplit = url.split('/')
+# dirName = urlSplit[-2]
+# if not os.path.exists(dirName):
+#     os.makedirs(dirName)
+# folderPath = os.path.join(os.getcwd(), dirName)
+# # In[4]:
+
+# print(folderPath)
+# print(url)
+# # 得到 m3u8 網址
+# htmlfile = cloudscraper.create_scraper(browser='firefox', delay=10).get(url)
+# print(htmlfile)
+# result = re.search("https://.+m3u8", htmlfile.text)
+# print(result)
+# # m3u8url = result[0]
+dirName = sys.argv[1]
 if not os.path.exists(dirName):
     os.makedirs(dirName)
 folderPath = os.path.join(os.getcwd(), dirName)
-# In[4]:
-
-
-# 得到 m3u8 網址
-htmlfile = cloudscraper.create_scraper(browser='firefox', delay=10).get(url)
-result = re.search("https://.+m3u8", htmlfile.text)
-m3u8url = result[0]
-
+m3u8url = sys.argv[2]
 m3u8urlList = m3u8url.split('/')
 m3u8urlList.pop(-1)
 downloadurl = '/'.join(m3u8urlList)
